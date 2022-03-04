@@ -1,6 +1,8 @@
 import React from 'react';
 import pdfThumnail from './pdf.png';
 import textThumbnail from './txt.png';
+import './App.css';
+import { Col } from 'react-bootstrap';
 
 class ThumbnailReview extends React.Component {
     constructor(props) {
@@ -27,9 +29,10 @@ class ThumbnailReview extends React.Component {
     {
         console.log('thumbnail called');
         return(
-            <div className="col-3">
+            <div>
                 <div className="row">
-                    <img src={this.state.thumbNailInfo} alt="thumbnailforpdf" style={{ height: '30px'}}/>
+                    <img src={this.state.thumbNailInfo} className="PreviewImage" alt="thumbnailforpdf"
+                    style={{ height: '2rem'}}/>
                 </div>
                 <div className="row">
                     <span>{this.state.file.name}</span>

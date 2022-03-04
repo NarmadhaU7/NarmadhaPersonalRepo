@@ -1,17 +1,22 @@
 import React from 'react';
+import './App.css';
 
 class ImagePreview extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = {
-        image: ''
-      };
+        super(props);
+        this.state = {
+            file: this.props.input,
+            imageSrc: ''
+        };
     }
 
     componentDidMount()
     {
+        console.log('component did mount in ImagePreview');
+        console.log(this.props.input);
+
         this.setState({
-            image: URL.createObjectURL(this.props.input)
+            imageSrc: URL.createObjectURL(this.props.input)
         })    
     }
 
@@ -19,7 +24,8 @@ class ImagePreview extends React.Component {
     {
         return(
             <div>
-                <img src={this.state.image} alt="preview image" style={{ height: '30px'}}/>
+                <img src={this.state.imageSrc} alt="preview image" className="PreviewImage" 
+                style={{ height: '2rem', margin: '10px'}}/>
             </div>
         );
     }
