@@ -1,0 +1,4 @@
+THINGS LEARNT
+1.  component cannot be pushed in to array state variable
+2.  property to disable the selection of single file
+3. using a state varaible in a function immediately after setting its value doesnt work 
