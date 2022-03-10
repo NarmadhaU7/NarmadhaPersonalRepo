@@ -1,0 +1,18 @@
+MVC - ModelViewController 
+Model: It includes all the data and its related logic
+View: Present data to the user or handles user interaction(UI)
+Controller: An interface between Model and View components. (Includes Services which consist of functionalities)
+
+From UI, the api request hits the controller. The controller(services) handles the request and perform operations in the db by making use of model.
+
+view -> controller -> services (make use of model)-> repository -> db
+               |-> gateway for API Requests.
+
+
+
+Dev UI URL -  https://1ps-dev.my1ps.com/
+dev api url - https://1ps-dev-api.my1ps.com
+
+
+Flow of UI Code
+index.js -> Routing -> Login and other screens 
